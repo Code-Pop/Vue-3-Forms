@@ -34,6 +34,20 @@
         class="field"
       />
 
+      <h3>Extras</h3>
+
+      <BaseCheckbox
+        label="Catering"
+        v-model="event.extras.catering"
+        class="field"
+      />
+
+      <BaseCheckbox
+        label="Live music"
+        v-model="event.extras.music"
+        class="field"
+      />
+
       <BaseButton type="submit" class="-fill-gradient">Submit</BaseButton>
     </form>
 
@@ -61,7 +75,11 @@ export default {
       category: '',
       title: '',
       description: '',
-      location: ''
+      location: '',
+      extras: {
+        catering: false,
+        music: false
+      }
     })
 
     return {

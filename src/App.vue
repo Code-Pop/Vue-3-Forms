@@ -181,6 +181,7 @@ textarea {
 [type="radio"] {
   box-sizing: border-box;
   padding: 0;
+  margin-right: 0.5rem;
 }
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {

@@ -41,6 +41,26 @@
         class="field"
       />
 
+      <h3>Extras</h3>
+
+      <div>
+        <input
+          type="checkbox"
+          v-model="event.extras.catering"
+          class="field"
+        />
+        <label>Catering</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          v-model="event.extras.music"
+          class="field"
+        />
+        <label>Live music</label>
+      </div>
+
       <button type="submit">Submit</button>
     </form>
 
@@ -68,7 +88,11 @@ export default {
       category: '',
       title: '',
       description: '',
-      location: ''
+      location: '',
+      extras: {
+        catering: false,
+        music: false
+      }
     })
 
     return {
