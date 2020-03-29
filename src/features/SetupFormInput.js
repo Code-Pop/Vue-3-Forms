@@ -1,6 +1,6 @@
 export default (props, { emit }) => {
   const updateValue = (event) => {
-    const val = (typeof props.modelValue === 'boolean')
+    const val = ['checkbox', 'radio'].includes(event.target.type)
       ? event.target.checked
       : event.target.value
 
