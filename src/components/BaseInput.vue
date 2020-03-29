@@ -14,6 +14,7 @@
 import SetupFormInput from '@/features/SetupFormInput'
 
 export default {
+  inheritAttrs: false,
   props: {
     label: {
       type: String,

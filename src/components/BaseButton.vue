@@ -6,6 +6,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  inheritAttrs: false
+}
+</script>
+
 <style scoped>
 .button {
   display: inline-flex;

@@ -1,19 +1,12 @@
 <template>
   <div>
+    <input
+      :checked="modelValue"
+      v-bind="{ ...$attrs, onChange: updateValue }"
+      type="checkbox"
+      class="field"
+    />
     <label v-if="label">{{ label }}</label>
-    <select :value="modelValue"
-      v-bind="{
-        ...$attrs,
-        onChange: updateValue
-      }"
-    >
-      <option
-        v-for="option in options"
-        :value="option"
-        :key="option"
-        :selected="option === modelValue"
-      >{{ option }}</option>
-    </select>
   </div>
 </template>
 
@@ -23,16 +16,12 @@ import SetupFormInput from '@/features/SetupFormInput'
 export default {
   inheritAttrs: false,
   props: {
-    options: {
-      type: Array,
-      required: true
-    },
     label: {
       type: String,
       default: ''
     },
     modelValue: {
-      type: [String, Number]
+      type: Boolean
     }
   },
   setup (props, context) {
