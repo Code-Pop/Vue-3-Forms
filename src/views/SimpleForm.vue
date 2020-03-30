@@ -41,8 +41,28 @@
         class="field"
       />
 
-      <h3>Extras</h3>
+      <h3>Are pets allowed?</h3>
+      <div>
+        <input
+            type="radio"
+            v-model="event.pets"
+            :value="1"
+            name="pets"
+          />
+        <label>Yes</label>
+      </div>
 
+      <div>
+        <input
+          type="radio"
+          v-model="event.pets"
+          :value="0"
+          name="pets"
+        />
+        <label>No</label>
+      </div>
+
+      <h3>Extras</h3>
       <div>
         <input
           type="checkbox"
@@ -89,6 +109,7 @@ export default {
       title: '',
       description: '',
       location: '',
+      pets: 1,
       extras: {
         catering: false,
         music: false
