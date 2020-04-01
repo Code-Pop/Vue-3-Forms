@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SetupFormInput from '@/features/SetupFormInput'
+import SetupFormComponent from '@/features/SetupFormComponent'
 
 export default {
   inheritAttrs: false,
@@ -25,7 +25,7 @@ export default {
     }
   },
   setup (props, context) {
-    const { updateValue } = SetupFormInput(props, context)
+    const { updateValue } = SetupFormComponent(props, context)
 
     return {
       updateValue
