@@ -62,7 +62,14 @@
         class="field"
       />
 
-      <BaseButton type="submit" class="-fill-gradient">Submit</BaseButton>
+      <div>
+        <BaseButton
+          type="submit"
+          class="-fill-gradient"
+        >
+          Submit
+        </BaseButton>
+      </div>
     </form>
 
     <pre>{{ event }}</pre>

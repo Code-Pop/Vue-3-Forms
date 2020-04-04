@@ -1,16 +1,8 @@
 <template>
-  <div>
-    <button v-bind="$attrs" class="button">
-      <slot/>
-    </button>
-  </div>
+  <button v-bind="$attrs" class="button">
+    <slot/>
+  </button>
 </template>
-
-<script>
-export default {
-  inheritAttrs: false
-}
-</script>
 
 <style scoped>
 .button {
