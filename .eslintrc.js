@@ -4,7 +4,7 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/vue3-essential',
     '@vue/standard'
   ],
   parserOptions: {
@@ -12,7 +12,6 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/valid-template-root': 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }
