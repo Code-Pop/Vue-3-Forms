@@ -13,7 +13,6 @@
         label="Title"
         v-model="event.title"
         type="text"
-        placeholder="Title"
         class="field"
       />
 
@@ -21,7 +20,6 @@
         label="Description"
         v-model="event.description"
         type="text"
-        placeholder="Description"
         class="field"
       />
 
@@ -30,7 +28,6 @@
         label="Location"
         v-model="event.location"
         type="text"
-        placeholder="Location"
         class="field"
       />
 
@@ -91,7 +88,7 @@ const categories = [
 
 export default {
   setup () {
-    const submitForm = () => { console.log('Submit') }
+    const createEvent = () => { console.log('Submit') }
     const event = reactive({
       category: '',
       title: '',
@@ -105,7 +102,7 @@ export default {
     })
 
     return {
-      submitForm,
+      createEvent,
       event,
       categories
     }

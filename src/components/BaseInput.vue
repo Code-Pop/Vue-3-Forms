@@ -1,27 +1,27 @@
 <template>
-  <div>
-    <label v-if="label">{{ label }}</label>
-    <input :value="modelValue"
-      v-bind="{
-        ...$attrs,
-        onInput: updateValue
-      }"
-    >
-  </div>
+  <label v-if="label">{{ label }}</label>
+  <input
+    :value="modelValue"
+    :placeholder="label"
+    v-bind="{
+      ...$attrs,
+      onInput: updateValue
+    }"
+  >
 </template>
 
 <script>
 import SetupFormComponent from '@/features/SetupFormComponent'
 
 export default {
-  inheritAttrs: false,
   props: {
     label: {
       type: String,
       default: ''
     },
     modelValue: {
-      type: [String, Number]
+      type: [String, Number],
+      default: ''
     }
   },
   setup (props, context) {
