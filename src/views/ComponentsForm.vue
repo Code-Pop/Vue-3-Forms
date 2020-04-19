@@ -6,6 +6,7 @@
         label="Select a category"
         :options="categories"
         v-model="event.category"
+        class="field"
       />
 
       <h3>Name & describe your event</h3>
@@ -63,6 +64,8 @@
         <BaseButton
           type="submit"
           class="-fill-gradient"
+          id="sup"
+          something="else"
         >
           Submit
         </BaseButton>
