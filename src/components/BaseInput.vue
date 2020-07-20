@@ -8,12 +8,23 @@
   <input
     v-bind="{
       ...$attrs,
-      id: uuid,
-      value: modelValue,
-      placeholder: label,
       onInput: updateValue
     }"
+    :id="uuid"
+    :value="modelValue"
+    :placeholder="label"
+    :aria-describedby="error ? `${uuid}-error` : null"
+    :aria-invalid="error ? true : false"
+    :class="{ error: error }"
   >
+  <p
+    v-if="error"
+    aria-live="assertive"
+    class="errorMessage"
+    :id="`${uuid}-error`"
+  >
+    {{ error }}
+  </p>
 </template>
 
 <script>
@@ -23,6 +34,10 @@ import UniqueID from '@/features/UniqueID'
 export default {
   props: {
     label: {
+      type: String,
+      default: ''
+    },
+    error: {
       type: String,
       default: ''
     },
