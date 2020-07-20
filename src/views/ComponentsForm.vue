@@ -15,6 +15,7 @@
         v-model="event.title"
         type="text"
         class="field"
+        error="This field is required"
       />
 
       <BaseInput
