@@ -1,10 +1,16 @@
 <template>
-  <label v-if="label">{{ label }}</label>
+  <label
+    v-if="label"
+    :for="uuid"
+  >
+    {{ label }}
+  </label>
   <input
-    :value="modelValue"
-    :placeholder="label"
     v-bind="{
       ...$attrs,
+      id: uuid,
+      value: modelValue,
+      placeholder: label,
       onInput: updateValue
     }"
   >
@@ -12,6 +18,7 @@
 
 <script>
 import SetupFormComponent from '@/features/SetupFormComponent'
+import UniqueID from '@/features/UniqueID'
 
 export default {
   props: {
@@ -26,9 +33,11 @@ export default {
   },
   setup (props, context) {
     const { updateValue } = SetupFormComponent(props, context)
+    const uuid = UniqueID().getID()
 
     return {
-      updateValue
+      updateValue,
+      uuid
     }
   }
 }
