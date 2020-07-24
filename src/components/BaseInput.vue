@@ -15,16 +15,14 @@
     :placeholder="label"
     :aria-describedby="error ? `${uuid}-error` : null"
     :aria-invalid="error ? true : false"
-    :class="{ error: error }"
+    :class="{ error }"
   >
-  <p
+  <BaseErrorMessage
     v-if="error"
-    aria-live="assertive"
-    class="errorMessage"
     :id="`${uuid}-error`"
   >
     {{ error }}
-  </p>
+  </BaseErrorMessage>
 </template>
 
 <script>
