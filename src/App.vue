@@ -172,7 +172,8 @@ textarea {
   box-sizing: border-box;
   border: solid 1px rgba(0, 0, 0, 0.4);
 }
-input.error {
+input.error,
+select.error {
   margin-bottom: 0;
 }
 input + p.errorMessage {
