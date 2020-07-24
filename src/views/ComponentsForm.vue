@@ -7,6 +7,7 @@
         :options="categories"
         v-model="event.category"
         class="field"
+        error="This field is required"
       />
 
       <h3>Name & describe your event</h3>
