@@ -66,7 +66,6 @@
         <BaseButton
           type="submit"
           class="-fill-gradient"
-          id="sup"
           something="else"
         >
           Submit
