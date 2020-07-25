@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <input
-        type="radio"
-        v-bind="{ ...$attrs, onChange: updateValue }"
-        :checked="modelValue === value"
-      />
-    <label v-if="label">{{ label }}</label>
-  </div>
+  <input
+      type="radio"
+      v-bind="{ ...$attrs, onChange: updateValue }"
+      :checked="modelValue === value"
+      :id="uuid"
+    />
+  <label
+    v-if="label"
+    :for="uuid"
+  >
+    {{ label }}
+  </label>
 </template>
 
 <script>
+import UniqueID from '@/features/UniqueID'
 import SetupFormComponent from '@/features/SetupFormComponent'
 
 export default {
-  inheritAttrs: false,
   props: {
     label: {
       type: String,
@@ -27,10 +31,12 @@ export default {
     }
   },
   setup (props, context) {
+    const uuid = UniqueID().getID()
     const { updateValue } = SetupFormComponent(props, context)
 
     return {
-      updateValue
+      updateValue,
+      uuid
     }
   }
 }
