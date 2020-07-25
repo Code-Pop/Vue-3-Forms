@@ -50,17 +50,21 @@
       />
 
       <h3>Extras</h3>
-      <BaseCheckbox
-        label="Catering"
-        v-model="event.extras.catering"
-        class="field"
-      />
+      <div>
+        <BaseCheckbox
+          label="Catering"
+          v-model="event.extras.catering"
+          class="field"
+        />
+      </div>
 
-      <BaseCheckbox
-        label="Live music"
-        v-model="event.extras.music"
-        class="field"
-      />
+      <div>
+        <BaseCheckbox
+          label="Live music"
+          v-model="event.extras.music"
+          class="field"
+        />
+      </div>
 
       <div>
         <BaseButton
