@@ -12,6 +12,12 @@
   >
     {{ label }}
   </label>
+  <BaseErrorMessage
+    v-if="error"
+    :id="`${uuid}-error`"
+  >
+    {{ error }}
+  </BaseErrorMessage>
 </template>
 
 <script>
@@ -26,6 +32,10 @@ export default {
     },
     modelValue: {
       type: Boolean
+    },
+    error: {
+      type: String,
+      default: ''
     }
   },
   setup (props, context) {
