@@ -35,19 +35,26 @@
       />
 
       <h3>Are pets allowed?</h3>
-      <BaseRadio
-        label="Yes"
+      <BaseRadioGroup
         v-model="event.pets"
-        :value="1"
         name="pets"
+        :options="[
+          { value: 1, label: 'Yes' },
+          { value: 0, label: 'No' }
+        ]"
       />
 
-      <BaseRadio
-        label="No"
-        v-model="event.pets"
-        :value="0"
-        name="pets"
-      />
+      <template v-if="event.pets === 0">
+        <h3>Are you sure? 🐶</h3>
+        <BaseRadioGroup
+          v-model="event.petsagain"
+          name="petsagain"
+          :options="[
+            { value: 1, label: 'Yes' },
+            { value: 0, label: 'No' }
+          ]"
+        />
+      </template>
 
       <h3>Extras</h3>
       <div>
@@ -103,6 +110,7 @@ export default {
       description: '',
       location: '',
       pets: 1,
+      petsagain: 1,
       extras: {
         catering: false,
         music: false
