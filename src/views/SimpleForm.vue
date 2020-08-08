@@ -15,13 +15,10 @@
 
       <h3>Name & describe your event</h3>
 
-      <label>Title</label>
-      <input
+      <BaseInput
         v-model="event.title"
-        type="text"
-        placeholder="Title"
-        class="field"
-      >
+        label="title"
+      />
 
       <label>Description</label>
       <input

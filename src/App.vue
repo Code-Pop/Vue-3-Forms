@@ -1,19 +1,14 @@
 <template>
   <div id="app">
     <SimpleForm />
-
-    <hr>
-
-    <ComponentsForm />
   </div>
 </template>
 
 <script>
 import SimpleForm from '@/views/SimpleForm'
-import ComponentsForm from '@/views/ComponentsForm'
 
 export default {
-  components: { SimpleForm, ComponentsForm }
+  components: { SimpleForm }
 }
 </script>
 
@@ -201,6 +196,7 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+input,
 [type="text"],
 [type="number"],
 [type="search"],
@@ -210,6 +206,7 @@ textarea {
   padding: 0 10px;
   font-size: 20px;
 }
+input,
 [type="text"]:focus,
 [type="number"]:focus,
 [type="search"]:focus,
