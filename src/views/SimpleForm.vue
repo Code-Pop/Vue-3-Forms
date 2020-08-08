@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Create an event</h1>
-    <form @submit.prevent="submitForm">
+    <form>
 
       <label>Select a category</label>
       <select v-model="event.category">
@@ -103,7 +103,6 @@ const categories = [
 
 export default {
   setup () {
-    const submitForm = () => { console.log('Submit') }
     const event = reactive({
       category: '',
       title: '',
@@ -117,7 +116,6 @@ export default {
     })
 
     return {
-      submitForm,
       event,
       categories
     }
