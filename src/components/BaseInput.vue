@@ -6,6 +6,7 @@
     {{ label }}
   </label>
   <input
+    class="field"
     v-bind="{
       ...$attrs,
       onInput: updateValue

@@ -6,7 +6,6 @@
         label="Select a category"
         :options="categories"
         v-model="event.category"
-        class="field"
         error="This field is required"
       />
 
@@ -15,7 +14,6 @@
         label="Title"
         v-model="event.title"
         type="text"
-        class="field"
         error="This field is required"
       />
 
@@ -23,7 +21,6 @@
         label="Description"
         v-model="event.description"
         type="text"
-        class="field"
       />
 
       <h3>Where is your event?</h3>
@@ -31,7 +28,6 @@
         label="Location"
         v-model="event.location"
         type="text"
-        class="field"
       />
 
       <h3>Are pets allowed?</h3>
@@ -61,7 +57,6 @@
         <BaseCheckbox
           label="Catering"
           v-model="event.extras.catering"
-          class="field"
         />
       </div>
 
@@ -69,7 +64,6 @@
         <BaseCheckbox
           label="Live music"
           v-model="event.extras.music"
-          class="field"
         />
       </div>
 

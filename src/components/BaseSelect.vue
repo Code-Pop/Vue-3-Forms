@@ -6,6 +6,7 @@
     {{ label }}
   </label>
   <select
+    class="field"
     v-bind="{
       ...$attrs,
       onChange: updateValue
