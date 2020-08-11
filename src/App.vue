@@ -196,7 +196,6 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-input,
 [type="text"],
 [type="number"],
 [type="search"],
@@ -206,7 +205,6 @@ input,
   padding: 0 10px;
   font-size: 20px;
 }
-input,
 [type="text"]:focus,
 [type="number"]:focus,
 [type="search"]:focus,
