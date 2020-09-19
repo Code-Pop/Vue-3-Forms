@@ -83,38 +83,34 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
-
-const categories = [
-  'sustainability',
-  'nature',
-  'animal welfare',
-  'housing',
-  'education',
-  'food',
-  'community'
-]
-
 export default {
-  setup () {
-    const createEvent = () => { console.log('Submit') }
-    const event = reactive({
-      category: '',
-      title: '',
-      description: '',
-      location: '',
-      pets: 1,
-      petsagain: 1,
-      extras: {
-        catering: false,
-        music: false
-      }
-    })
-
+  data () {
     return {
-      createEvent,
-      event,
-      categories
+      categories: [
+        'sustainability',
+        'nature',
+        'animal welfare',
+        'housing',
+        'education',
+        'food',
+        'community'
+      ],
+      event: {
+        category: '',
+        title: '',
+        description: '',
+        location: '',
+        pets: 1,
+        extras: {
+          catering: false,
+          music: false
+        }
+      }
+    }
+  },
+  methods: {
+    createEvent () {
+      console.log('submit')
     }
   }
 }
