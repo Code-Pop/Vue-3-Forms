@@ -8,7 +8,7 @@
     class="field"
     :id="uuid"
     :aria-describedby="error ? `${uuid}-error` : null"
-    :aria-invalid="error"
+    :aria-invalid="error ? true : false"
   >
   <p
     v-if="error"
